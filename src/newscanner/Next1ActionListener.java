@@ -18,10 +18,11 @@ public class Next1ActionListener implements ActionListener{
 		settings.height.onNext(165);
 		Panel.panel.setBackground(new Color(255, 254, 255));
 		
-		Panel.text.setText("Выберите расстояние до поверхности");
-		Panel.text.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		Panel.text.setBounds(10, 5, 320, 31);
-		Panel.panel.add(Panel.text);
+		settings.bundle.subscribe(v -> Panel.text2.setText(v.getString("distanse")));
+		//Panel.text2.setText("Выберите расстояние до поверхности");
+		Panel.text2.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		Panel.text2.setBounds(10, 5, 320, 31);
+		Panel.panel.add(Panel.text2);
 		
 		Panel.distance.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
@@ -56,6 +57,8 @@ public class Next1ActionListener implements ActionListener{
 		Panel.next2.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		Panel.next2.addActionListener(new Next2ActionListener());
 		Panel.panel.add(Panel.next2);
+		
+		//Panel.Combo(95);
 	}
 
 }

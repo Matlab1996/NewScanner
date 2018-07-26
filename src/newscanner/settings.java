@@ -1,5 +1,7 @@
 package newscanner;
 
+import java.util.ResourceBundle;
+
 import rx.subjects.BehaviorSubject;
 
 public class settings {
@@ -16,6 +18,8 @@ public class settings {
     public static BehaviorSubject<Integer> maxArea = BehaviorSubject.create(100);
     public static BehaviorSubject<Integer> height  = BehaviorSubject.create(415);
     public static BehaviorSubject<CaptureSize> captureSize = BehaviorSubject.create(new CaptureSize(355, 460));
+    
+    public static BehaviorSubject<ResourceBundle> bundle = BehaviorSubject.create(ResourceBundle.getBundle("global_ru"));
     
     public static class CaptureSize  {
     	final int w;

@@ -19,10 +19,10 @@ public class Next3ActionListener implements ActionListener {
 		Panel.label.setBounds(10, 5, 320, 240);
 		Panel.panel.add(Panel.label);
 		
-		Panel.text.setText("Минимальный и максимальный размер");
-		Panel.text.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		Panel.text.setBounds(10, 250, 320, 31);
-		Panel.panel.add(Panel.text);
+		Panel.text4.setText("Минимальный и максимальный размер");
+		Panel.text4.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		Panel.text4.setBounds(10, 250, 320, 31);
+		Panel.panel.add(Panel.text4);
 		
 		settings.maxArea.subscribe(value -> Panel.maxArea.setValue(value));
 		Panel.maxArea.addMouseMotionListener(new MouseMotionAdapter() {

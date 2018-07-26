@@ -18,10 +18,10 @@ public class Back2ActionListener implements ActionListener {
 		Panel.label.setBounds(10, 5, 320, 240);
 		Panel.panel.add(Panel.label);
 		
-		Panel.text.setText("Настройка экспозиции");
-		Panel.text.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		Panel.text.setBounds(10, 250, 320, 31);
-		Panel.panel.add(Panel.text);
+		settings.bundle.subscribe(v -> Panel.text1.setText(v.getString("exposure")));
+		Panel.text1.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		Panel.text1.setBounds(10, 250, 320, 31);
+		Panel.panel.add(Panel.text1);
 		
 		settings.exposure.subscribe(value -> Panel.exposure.setValue(value));
 		Panel.exposure.addMouseMotionListener(new MouseMotionAdapter() {
@@ -50,6 +50,10 @@ public class Back2ActionListener implements ActionListener {
 		Panel.next1.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		Panel.next1.addActionListener(new Next1ActionListener());
 		Panel.panel.add(Panel.next1);
+		
+		Panel.Combo(340);
+		Panel.panel.add(Panel.comboBox);
+
 	}
 
 }

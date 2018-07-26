@@ -19,10 +19,10 @@ public class Next2ActionListener implements ActionListener {
 		Panel.panel.add(Panel.label);
 
 		// Panel1.text.removeAll();
-		Panel.text.setText("Настройка чувствительности");
-		Panel.text.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		Panel.text.setBounds(10, 250, 320, 31);
-		Panel.panel.add(Panel.text);
+		Panel.text3.setText("Настройка чувствительности");
+		Panel.text3.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		Panel.text3.setBounds(10, 250, 320, 31);
+		Panel.panel.add(Panel.text3);
 
 		settings.upper.subscribe(value -> Panel.upper.setValue((int) value));
 		Panel.upper.addMouseMotionListener(new MouseMotionAdapter() {

@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 @SuppressWarnings("serial")
 public class Webcamprop extends JFrame {
 
-	public static void main(String[] args) throws IOException, AWTException {
+	public static void main(String[] args) throws IOException, AWTException{
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

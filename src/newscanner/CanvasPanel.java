@@ -23,11 +23,9 @@ public class CanvasPanel extends JFrame{
     	g.setColor(Color.GREEN);
     	Graphics2D g2 = (Graphics2D) g; 
     	g2.setStroke(new BasicStroke(5.0f));
-    	//g.setFont(new Font("Times New Roman", Font.BOLD, 44));
     	
     	for(int x = 0; x <= getWidth(); x+=(getWidth()-1)/2) {
     		for(int y = 0; y <= getHeight(); y+=(getHeight()-1)/2) {
-	    		//g.drawString("+", x-11, y+15);
 	    		g2.drawLine(x, y-10, x, y+10);
 	    		g2.drawLine(x-10, y, x+10, y);
     		}

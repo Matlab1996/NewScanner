@@ -2,6 +2,7 @@ package newscanner;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ResourceBundle;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -11,7 +12,11 @@ public class Panel extends JFrame{
 
 	static JPanel panel = new JPanel();
 	static JLabel label = new JLabel();
-	static JLabel text = new JLabel();
+	
+	static JLabel text1 = new JLabel();
+	static JLabel text2 = new JLabel();
+	static JLabel text3 = new JLabel();
+	static JLabel text4 = new JLabel();
 	
 	static JSlider exposure = new JSlider(-13, -1, -6);
 	static JSlider distance = new JSlider(0, 15, 1);
@@ -28,6 +33,8 @@ public class Panel extends JFrame{
 	static JButton next2 = new JButton("Далее");
 	static JButton next3 = new JButton("Далее");
 	static JButton next4 = new JButton("Далее");
+	
+	static JComboBox<String> comboBox;
 	
 	public Panel() {
 		super("Application");
@@ -46,10 +53,11 @@ public class Panel extends JFrame{
 		label.setBounds(10, 5, 320, 240);
 		panel.add(label);
 		
-		text.setText("Настройка экспозиции");
-		text.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		text.setBounds(10, 250, 320, 31);
-		panel.add(text);
+		settings.bundle.subscribe(v -> text1.setText(v.getString("exposure")));
+		//text.setText("Настройка экспозиции");
+		text1.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		text1.setBounds(10, 250, 320, 31);
+		panel.add(text1);
 
 		settings.exposure.subscribe(value -> exposure.setValue(value));
 		exposure.addMouseMotionListener(new MouseMotionAdapter() {
@@ -78,5 +86,32 @@ public class Panel extends JFrame{
 		next1.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		next1.addActionListener(new Next1ActionListener());
 		panel.add(next1);
+		
+		Combo(340);
+	}
+	
+	public static void Combo(int y) {
+		String[] resolution = new String[] {"RU", "AZ", "EN"};
+		comboBox = new JComboBox<String>(resolution);
+		comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				switch ((String) comboBox.getSelectedItem()) {
+				case ("RU"): {
+					settings.bundle.onNext(ResourceBundle.getBundle("global"));
+					break;
+				}
+				case ("AZ"): {
+					settings.bundle.onNext(ResourceBundle.getBundle("global_az"));
+					break;
+				}
+				case ("EN"): {
+					settings.bundle.onNext(ResourceBundle.getBundle("global_en"));
+					break;
+				}}
+			}
+		});
+		//settings.bundle.subscribe(v -> Panel.text2.setText(v.getString("global.distanse")));
+		comboBox.setBounds(150, y, 50, 25);
+		panel.add(comboBox);
 	}
 }
