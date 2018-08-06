@@ -1,10 +1,19 @@
 package newscanner;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.util.ResourceBundle;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
 import javax.swing.border.EmptyBorder;
 
 @SuppressWarnings("serial")
@@ -38,10 +47,9 @@ public class Panel extends JFrame{
 	
 	public Panel() {
 		super("Application");
-		setBounds(100, 100, 355, 460);
-		setLocationRelativeTo(null);
 		
 		settings.height.subscribe(h -> setSize(355, h));
+		setLocationRelativeTo(null);
 		
 		panel.setBackground(Color.white);
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));

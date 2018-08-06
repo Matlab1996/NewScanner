@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/resources=UTF-8
 encoding//src/main/resources/global_az.properties=UTF-8
 encoding//src/main/resources/global_ru.properties=UTF-8
 encoding//src/newscanner/Back2ActionListener.java=UTF-8
@@ -6,5 +7,6 @@ encoding//src/newscanner/Next1ActionListener.java=UTF-8
 encoding//src/newscanner/Next2ActionListener.java=UTF-8
 encoding//src/newscanner/Next3ActionListener.java=UTF-8
 encoding//src/newscanner/Panel.java=UTF-8
+encoding//src/newscanner/Panel1.java=UTF-8
 encoding/<project>=UTF-8
 encoding/src=UTF-8
