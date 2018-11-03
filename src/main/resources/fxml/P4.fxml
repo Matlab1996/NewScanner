@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="495.0" prefWidth="340.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newscanner.P4">
+   <children>
+      <Label fx:id="label4" prefHeight="240.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="text4" prefHeight="30.0" text="Label" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="260.0" />
+      <JFXSlider fx:id="slider_max" majorTickUnit="40.0" max="400.0" prefHeight="45.0" showTickLabels="true" value="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="325.0" />
+      <JFXSlider fx:id="slider_min" majorTickUnit="40.0" max="400.0" prefHeight="45.0" showTickLabels="true" value="25.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="405.0" />
+      <JFXButton fx:id="back4" prefHeight="25.0" prefWidth="75.0" text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="460.0" />
+      <JFXButton fx:id="next4" prefHeight="25.0" prefWidth="75.0" text="Next" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="460.0" />
+   </children>
+</AnchorPane>

@@ -18,7 +18,7 @@
       		<configuration>
         		<archive>
           			<manifest>
-            			<mainClass>newscanner.Panel1</mainClass>
+            			<mainClass>newscanner.Main</mainClass>
           			</manifest>
         		</archive>
         		<descriptorRefs>
